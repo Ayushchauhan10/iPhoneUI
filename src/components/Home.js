@@ -66,7 +66,7 @@ const Home = () => {
         <div className='w-full'>
             <Navbar time={currentTimeWithSeconds}/>
         </div> 
-            <div className='bg w-[330px] my-auto text-red-300  '>
+            <div className='bg w-[330px] my-auto '>
               <div className="slider-container">
                 <Slider className=''
                   {...settings}>
