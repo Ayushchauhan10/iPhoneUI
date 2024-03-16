@@ -1,0 +1,28 @@
+input {
+    --c: rgb(255, 255, 255); /* active color */
+    --g: -8px; /* the gap */
+    --l: 60px; /* line thickness*/
+    --s: 60px; /* thumb size*/
+    
+    width: 140px;
+    height: var(--s); 
+    -webkit-appearance :none;
+    -moz-appearance :none;
+    appearance :none;
+    background: none;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 15px;
+  }
+  
+
+  input[type="range" i]::-webkit-slider-thumb{
+    height: var(--s);
+    aspect-ratio: 1;
+    width: 0px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 var(--l) inset var(--c);
+    border-image: linear-gradient(90deg,var(--c) 50%,#0f0f0f71 0) 0 1/calc(50% - var(--l)/2) 200px/0 calc(200px + var(--g)); 
+    -webkit-appearance: none;
+    appearance: none;
+  }
