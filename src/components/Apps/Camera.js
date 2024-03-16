@@ -49,7 +49,7 @@ const Camera = () => {
     };
 
     const videoConstraints = {
-        height: '720px',
+        height: '700px',
         width: '350px',
         facingMode: 'user' // Use 'user' to use the front camera, 'environment' for the back camera
     };
@@ -71,7 +71,7 @@ const Camera = () => {
                     ref={webcamRef}
                     videoConstraints={videoConstraints}
                     screenshotFormat="image/jpeg"
-                  
+                    className='h-[600px]'
                 />
             </div>
             <div className='absolute w-full h-[120px] bottom-[70px] flex flex-col items-center justify-center gap-2'>
