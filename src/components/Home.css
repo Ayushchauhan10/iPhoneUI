@@ -1,10 +1,13 @@
 /* Custom CSS */
 .slick-dots li button:before {
+
+  /* background-color: aliceblue; */
+  /* border-radius: 100%;/ */
   font-size: 10px;
-  color: white; /* Change to the color you desire for inactive dots */
+  color: white !important; 
 }
 
 .slick-dots li.slick-active button:before {
   font-size: 10px;
-  color: white; 
+  color: white !important; 
 }

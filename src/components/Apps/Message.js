@@ -5,7 +5,7 @@ import Navbar from '../Navbar'
 import UserPicWithText from './UserPicWithText';
 import { RiEditBoxLine } from "react-icons/ri";
 
-const Setting = () => {
+const Message = () => {
     const [currentTimeWithSeconds, setCurrentTimeWithSeconds] = useState('00:00:00');
   useEffect(() => {
     const interval = setInterval(() => {
@@ -23,9 +23,10 @@ const Setting = () => {
         <div className='w-full'>
             <Navbar time={currentTimeWithSeconds}/>
         </div> 
-        <div className='bg-white/25 top-[60px] absolute backdrop-blur-lg flex flex-col gap-2 px-4 w-[300px] h-[550px] py-1  rounded-2xl'>
+        <div className='bg-white/25 top-[80px] absolute backdrop-blur-lg flex flex-col gap-2 px-4 w-[300px] h-[550px] py-5  rounded-2xl'>
             <div className='text-2xl font-extrabold flex flex-row items-center justify-between'>
-                <div className='border-b-2 w-full py-1'>Settings</div>
+                <div className=''>Messages</div>
+                <RiEditBoxLine/>
             </div>
             <div className='overflow-y-auto'>
                 {Array.from({ length: 20 }).map((_, i) => (
@@ -40,4 +41,10 @@ const Setting = () => {
   )
 }
 
-export default Setting
+export default Message
+
+
+
+
+
+

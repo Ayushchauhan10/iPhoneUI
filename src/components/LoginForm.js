@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { RiLoginCircleFill } from "react-icons/ri";
-
+import { Link } from 'react-router-dom';
 
 const LoginForm = ({setisUser}) => {
 
@@ -49,7 +49,7 @@ const LoginForm = ({setisUser}) => {
         <form onSubmit={handleOnSubmit} className='flex flex-col  -gap-1 justfy-center  items-center'>
             <div className={` w-full flex flex-col gap-2 mt-2 ${emailFocus ?'transition-all duration-100': ' transition-all duration-100'}`}>
                 <div className='flex  h-[60px] flex-col relative px-1 rounded-full'>
-                <label className={`text-xs text-slate-300 absolute mb-1 top-1 ${emailFocus ? '-top-4 transition-all duration-100' : ' transition-all duration-100'}`}>
+                <label className={`text-xs text-slate-300 absolute mb-1 -top-3 ${emailFocus ? '-top-4 transition-all duration-100' : ' transition-all duration-100'}`}>
                     Email ID
                 </label>
 
@@ -66,18 +66,18 @@ const LoginForm = ({setisUser}) => {
                 </div>
                
                 <div className='flex  h-[60px] flex-col relative px-1 rounded-full'>
-                <label className={`text-xs text-slate-300 absolute mb-1 top-1 ${passwordFocus ? '-top-4 transition-all duration-100' : ' transition-all duration-100'}`}>
+                <label className={`text-xs text-slate-300 absolute mb-1 -top-2 ${passwordFocus ? '-top-4 transition-all duration-100' : ' transition-all duration-100'}`}>
                     Password
                 </label>
 
-                <input required
+                <input  required
                         type={showPassword ? "text" : "password"}
                         name="password"
                         value={password}
                         onChange={handleOnChange}
                         onFocus={handleInputFocus1}
                         onBlur={handleInputBlur1} 
-                        className=" text-sm py-1 text-left border-b-2 border-dashed focus:outline-none bg-transparent"
+                        className=" text-sm py-1 w-full rounded-none text-left border-b-2 border-dashed focus:outline-none bg-transparent"
                         />
                 <span onClick={() => setShowPassword((prev) => !prev)}
                     className=" absolute right-2 z-[10] cursor-pointer">
@@ -97,10 +97,10 @@ const LoginForm = ({setisUser}) => {
             </div>
 
             <div className='flex flex-col justify-center items-center -mt-2'>
-                <button type="submit">
+            <Link to='/homeScreen'> <button type="submit">
                    <RiLoginCircleFill className='text-5xl'/>
                 </button>
-
+</Link>
             </div>
 
 

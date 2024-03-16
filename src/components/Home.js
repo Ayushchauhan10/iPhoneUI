@@ -82,7 +82,7 @@ const Home = () => {
                             <Link to='/map'><AppGridComponent appName="Map" img={mapApp}/></Link>
                             <AppGridComponent appName="Podcast" img={podcastApp}/>
                             <AppGridComponent appName="Reminders" img={reminderApp}/>
-                            <AppGridComponent appName="Messages" img={messageApp}/>
+                           <Link to='/messages'> <AppGridComponent appName="Messages" img={messageApp}/></Link>
                             <Link to='/settings'><AppGridComponent appName="Settings" img={settingApp}/></Link>
                             <Link to='/youtube'><AppGridComponent appName="YouTube" img={youtubeApp}/></Link>
                             <Link to='/weatherApp'><AppGridComponent appName="Weather" img={weatherApp}/></Link>
@@ -111,12 +111,12 @@ const Home = () => {
              </div>
             </div>
        
-        <div className='bg-slate-400 rounded-xl flex flex-row items-center gap-1 p-1 mb-[115px]'>
+        <div className='bg-slate-400 h-[20px] rounded-xl flex flex-row items-center gap-1 px-1 py-[1px] mb-[115px] justify-center '>
           <CiSearch className='text-white' />
           <input
             type="search"
             placeholder="Search"
-            className="w-[50px] text-white text-[10px] bg-transparent focus:outline-none placeholder-gray-200"
+            className="w-[50px] h-[20px] text-white text-[10px] bg-transparent focus:outline-none placeholder-gray-200"
         />
 
         </div>
@@ -130,6 +130,8 @@ const Home = () => {
 
           </div>
         </div>
+
+       
 
     </div>
   )

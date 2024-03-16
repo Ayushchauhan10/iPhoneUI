@@ -1,7 +1,8 @@
 import React from 'react'
+import './Home.css'
 import LeftSide from './LeftSide'
 import RightSide from './RightSide'
-
+import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LockScreen from './LockScreen';
 import Home from './Home';
@@ -13,8 +14,15 @@ import Youtube from './Apps/Youtube';
 import Map from './Apps/Map';
 import WeatherApp from './Apps/WeatherApp';
 import Calls from './Apps/Calls';
+import Message from './Apps/Message';
+import ControlCenter from './ControlCenter';
 
 const Frame = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  const toggleVisibility = () => {
+    setIsVisible(!isVisible);
+  };
   return (
     <div className='relative flex cursor-pointer'>
       
@@ -41,6 +49,7 @@ const Frame = () => {
                         <Route path="/weatherApp" element={<WeatherApp />} />
                         <Route path="/map" element={<Map />} />
                         <Route path="/calls" element={<Calls />} />
+                        <Route path="/messages" element={<Message />} />
 
 
                 </Routes>
@@ -53,6 +62,29 @@ const Frame = () => {
         <div className='rightSide top-[200px] absolute -right-[4px] '>
              <RightSide/>
         </div>
+
+
+
+        <div
+          className={`absolute mt-[70px] bottom-${isVisible?'7':'0'} left-4 bg-white/25 backdrop-blur-lg w-[325px] h-[600px] py-5 px-2 rounded-2xl ${isVisible ? 'animate-slideIn' : 'animate-slideOut'} '}`}
+          style={{
+            display: isVisible ? 'block' : 'none',
+            animationDuration: '0.5s',
+            animationFillMode: 'forwards',
+          }}
+        >
+          <ControlCenter/>
+  </div>
+
+        <div className=' bottom-0  left-20 h-[15px]  w-[200px] bg-black  rounded-t-[5px] border-t-2 absolute border-white'
+          onClick={toggleVisibility}
+          style={{ cursor: 'pointer' }}
+        >
+
+        
+      </div>
+
+
     </div>
   )
 }
