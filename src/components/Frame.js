@@ -15,6 +15,7 @@ import Map from './Apps/Map';
 import WeatherApp from './Apps/WeatherApp';
 import Calls from './Apps/Calls';
 import Message from './Apps/Message';
+import Metro from './Apps/Metro'
 import ControlCenter from './ControlCenter';
 
 const Frame = () => {
@@ -48,6 +49,7 @@ const Frame = () => {
                         <Route path="/youtube" element={<Youtube />} />
                         <Route path="/weatherApp" element={<WeatherApp />} />
                         <Route path="/map" element={<Map />} />
+                        <Route path="/metro" element={<Metro />} />
                         <Route path="/calls" element={<Calls />} />
                         <Route path="/messages" element={<Message />} />
 

@@ -3,7 +3,7 @@ import wallpaper from '../../images/wallpaper.jpeg'
 import { useState,useEffect } from 'react';
 import Navbar from '../Navbar'
 import UserPicWithText from './UserPicWithText';
-import { RiEditBoxLine } from "react-icons/ri";
+
 
 const Setting = () => {
     const [currentTimeWithSeconds, setCurrentTimeWithSeconds] = useState('00:00:00');
@@ -29,7 +29,7 @@ const Setting = () => {
             </div>
             <div className='overflow-y-auto'>
                 {Array.from({ length: 20 }).map((_, i) => (
-                    <UserPicWithText key={i} />
+                    <UserPicWithText key={i} heading="SubSetting "  subtext="Customize this setting ...." />
                 ))}
             </div>
 

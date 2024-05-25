@@ -15,15 +15,11 @@ const Map = () => {
       return () => clearInterval(interval); 
   }, []); 
   return (
-    <div className='flex flex-col items-center gap-2 justify-start bg-black w-full h-[700px] py-2'>
+    <div className='flex flex-col justify-start items-center gap-2  bg-white w-full h-[700px] py-2'>
          <Navbar time={currentTimeWithSeconds}/>
 
-      <div>
-        <iframe
-        title="YouTube"
-        src="https://web.whatsapp.com/"
-        className='w-[350px] h-[650px]'
-      />
+      <div className=' flex flex-col items-center justify-end h-[200px] '>
+       Map
       </div>
     </div>
   );

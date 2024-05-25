@@ -30,7 +30,7 @@ const Message = () => {
             </div>
             <div className='overflow-y-auto'>
                 {Array.from({ length: 20 }).map((_, i) => (
-                    <UserPicWithText key={i} />
+                    <UserPicWithText key={i} heading="Contact Name"  subtext="This is a very good message ...." />
                 ))}
             </div>
 

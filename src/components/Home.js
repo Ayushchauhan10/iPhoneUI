@@ -32,6 +32,8 @@ import musicApp from '../images/musicApp.jpeg'
 import callApp from '../images/callApp.jpeg'
 import youtubeApp from '../images/youtubeApp.png'
 import weatherApp from '../images/weatherApp.jpeg'
+import metroApp from '../images/metroApp.png'
+
 import { Link } from 'react-router-dom';
 
 
@@ -87,6 +89,8 @@ const Home = () => {
                             <Link to='/youtube'><AppGridComponent appName="YouTube" img={youtubeApp}/></Link>
                             <Link to='/weatherApp'><AppGridComponent appName="Weather" img={weatherApp}/></Link>
                             <AppGridComponent appName="Notes" img={notesApp}/>
+
+                            <Link to='/metro'><AppGridComponent appName="Delhi Metro" img={metroApp}/></Link>
                         </div>
                     </div>
                     <div className='w-full h-[450px]'>

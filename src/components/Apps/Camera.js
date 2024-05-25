@@ -90,7 +90,7 @@ const Camera = () => {
                     {cameraMode ?
                         <div className='w-[60px] h-[60px] rounded-full bg-white mx-[20px]'>
 
-                            <div className='absolute bottom-[23px] left-[150px] h-[50px] w-[50px] bg-white border-2 border-black rounded-full'
+                            <div className='absolute bottom-[23px] left-[152.5px] h-[50px] w-[50px] bg-white border-2 border-black rounded-full'
                                 onClick={capture}></div>
                         </div> :
 
